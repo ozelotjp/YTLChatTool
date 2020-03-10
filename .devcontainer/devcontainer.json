@@ -1,0 +1,26 @@
+// https://code.visualstudio.com/docs/remote/containers#_devcontainerjson-reference
+{
+  "name": "YTLChatTool",
+  "extensions": [
+    // General
+    "editorconfig.editorconfig",
+    "codezombiech.gitignore",
+    "eamodio.gitlens",
+    // ESLint
+    "dbaeumer.vscode-eslint"
+  ],
+  "settings": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "eslint.validate": [
+      "javascript"
+    ]
+  },
+  "postCreateCommand": "apk add git bash",
+  // Docker-Compose
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app"
+}

@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "YTLChatTool",
+  "description": "YouTube Live のチャットで NG ワードを含むものを非表示にする。",
+  "version": "1.0.0",
+  "author": "ozelotjp",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.youtube.com/live_chat*",
+        "https://gaming.youtube.com/watch*",
+        "https://gaming.youtube.com/channel/*/live"
+      ],
+      "js": [
+        "watch.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
